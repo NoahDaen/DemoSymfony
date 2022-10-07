@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FormController!{% endblock %}
+
+{% block body %}
+    {% if nom %}
+        <p>{{ nom }}</p>
+    {% endif %}
+
+    <form method="post" action="{{ path('app_form') }}">
+        <input type="text" name="name" placeholder="Nom...">
+        <button type="submit" name="valider">Valider</button>
+    </form>
+
+
+{% endblock %}
